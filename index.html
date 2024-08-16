@@ -1,0 +1,31 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Livros</title>
+    <link rel="stylesheet" href="../biblioteca/registro_login/registro_login.css">
+    <link rel="shortcut icon" href="../biblioteca/registro_login/registro_login_imagens/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <img src="../biblioteca/registro_login/registro_login_imagens/logo.png" alt="Logo" class="logo"> <!--Logo-->
+        <br>
+        <h2>Registrar</h2>
+        <form id="register-form">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Senha" required>
+            <input type="password" id="confirm-password" placeholder="Confirme a Senha" required>
+            <select id="register-role">
+                <option value="user">Usuário</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <button type="submit">Registrar</button>
+        </form>        
+        <p>Já tem uma conta? <a href="../biblioteca/registro_login/login.html">Login</a></p>
+    </div>
+    <script src="../biblioteca/registro_login/registro_login.js"></script>
+</body>
+</html>

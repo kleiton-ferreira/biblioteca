@@ -1,0 +1,119 @@
+/* Centralizar o conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column; /* Permite que o cabeçalho e o formulário fiquem em colunas */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garante que o conteúdo ocupe a altura total da tela */
+  margin: 0;
+  padding: 0;
+}
+
+/* Centralizar e estilizar o cabeçalho H1 */
+main h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Aumenta o tamanho da fonte do cabeçalho */
+}
+
+/* Estilo do contêiner do formulário */
+.form-container {
+  width: 100%; /* Ocupa 100% do espaço disponível */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo do formulário */
+.card-contato {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo do formulário levemente transparente */
+  padding: 30px; /* Aumenta o padding para dar mais espaço interno */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px; /* Aumenta a largura máxima do formulário */
+  text-align: center;
+}
+
+/* Estilos adicionais do formulário de contato */
+.card-contato input, 
+.card-contato textarea {
+  padding: 15px; /* Aumenta o padding para os campos */
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff; /* Fundo branco para inputs e textarea */
+  color: #5a5a5a; /* Cor do texto */
+  width: 100%; /* Campos ocupam toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.card-contato input:focus, 
+.card-contato textarea:focus {
+  border-color: #007bff; /* Cor de destaque quando focado */
+  outline: none;
+}
+
+/* Estilo para o botão */
+.card-contato button {
+  padding: 15px; /* Aumenta o padding do botão */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%; /* Botão ocupa toda a largura disponível */
+}
+
+.card-contato button:hover {
+  background-color: #0056b3; /* Mudança de cor no hover */
+}
+
+/* Estilização do cabeçalho */
+header {
+  background-color: gray;
+}
+
+/* Estilização da cor de fundo */
+body {
+  background-color: lightgray;
+}
+
+/* Estilização da imagem do usuário */
+.imagemUsuario {
+  height: 250px;
+}
+
+/* Estilização das cores das seções */
+.cor-secao {
+  background-color: gray;
+  color: white;
+}
+
+/* Estilização das imagens dos cards */
+.imagem-card {
+  height: 300px;
+}
+
+/* Estilização do footer */
+footer {
+  background-color: gray;
+  height: 100px;
+}
+
+/* Estilo da imagem do logo no header */
+.logo-img {
+  height: 100px; /* Ajuste a altura da imagem conforme necessário */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+/* Alinhamento do título e logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Espaçamento entre o logo e o texto */
+.ml-2 {
+  margin-left: 10px; /* Ajuste o espaço entre a imagem e o texto conforme necessário */
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Livros - Contato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!--FONT AWESOME CSS-->
+    <link rel="stylesheet" href="../estilizacao_customizada/contato.css">
+    <link rel="shortcut icon" href="../registro_login/registro_login_imagens/logo.png" type="image/x-icon">   
+</head>
+<body>
+
+    <header> <!--Início do header-->
+        <nav class="navbar navbar-expand-lg navbar-dark"> <!--Início da navegação-->
+            <div class="container"> <!--Início do container da navegação-->
+    
+                <a href="#" class="navbar-brand d-flex align-items-center"> <!--Início do título do Site-->
+                    <img src="../Imagens/logo.png" alt="Logo" class="logo-img">
+                    <h2 class="ml-2">NET LIVROS</h2>
+                </a> <!--Fim do título do Site-->
+    
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal"> <!--Início do botão da responsividade-->
+                    <i class="fas fa-bars"></i>
+                </button> <!--Fim do botão da responsividade-->
+    
+                <div class="collapse navbar-collapse" id="nav-principal"> <!--Início do conteúdo principal da navegação-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="../paginas_principais/usuario.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="livros.html" class="nav-link">Livros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim do conteúdo principal da navegação-->
+            </div> <!--Fim do container da navegação-->
+        </nav> <!--Fim da navegação-->
+    </header> <!--Fim do header-->
+
+    <main> <!--Início do conteúdo principal da página-->
+
+        <h2>Fale Conosco</h2>
+    </br>
+        <h6>Envie sua dúvida, crítica, sugestão ou elogio.</h6> 
+        <h6>Sua colaboração é importante para que possamos </h6>
+        <h6>fazer nosso grupo cada vez melhor!</h6>
+    </br>
+        <h6>Fone: (83) 3321-1313 - 9 8632-1313</h6>
+    </br>
+        <div class="form-container"> <!-- Usando form-container como contêiner -->
+            <form action="https://api.staticforms.xyz/submit" method="post" class="card-contato">
+            <input type="hidden" name="accessKey" value="ba3f9053-9b4c-4d1a-96df-6c973a8cdec2">
+            
+            <label for="inputNome">Primeiro Nome:</label>
+            <input type="text" id="inputNome" name="name" required maxlength="35" minlength="2">
+            <span></span>
+            
+            <label for="inputEmail">Endereço de Email:</label>
+            <input type="email" id="inputEmail" name="email" required maxlength="60" />
+            <span></span>
+           
+            <label for="textAreaMensagem">Mensagem:</label>
+            <textarea name="message" id="textAreaMensagem" required maxlength="200"></textarea>
+            <span></span>
+            
+            <button type="submit">Enviar Mensagem</button>
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/paginas_principais/conf_envio_mensagem.html" />
+          </form>
+        </div> <!-- Fechar a div corretamente -->
+        
+        <hr />
+    </main>
+        
+        <footer class="mt-5 pt-4"> <!--Início do conteúdo do footer-->
+        
+    <div class="container"> <!--Início do container do footer-->
+        <div class="row"> <!--Início da linha do footer-->
+            <div class="col-md-8">
+                <p>
+                    <a href="../paginas_principais/index.html" class="text-white">Home</a>
+                    <a href="livros.html" class="text-white pl-3">Livros</a>
+                    <a href="contato.html" class="text-white pl-3">Contato</a>
+                </p>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end">
+                <a href="" class="btn btn-outline-dark">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="btn btn-outline-dark ml-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="btn btn-outline-dark ml-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="btn btn-outline-dark ml-2">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div> <!--Fim da linha do footer-->
+    </div> <!--Fim do container do footer-->
+</footer> <!--Fim do conteúdo do footer-->
+
+
+
+</body>
+
+</html>
