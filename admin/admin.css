@@ -1,0 +1,223 @@
+/* admin.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #001f3f, #001020); /* Gradiente azul marinho */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title h1 {
+    color: #0056b3; /* Azul que você deseja */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% / 3 - 20px);
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    max-height: 300px; /* Altura máxima do container da tabela */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table td button:hover {
+    background-color: #c82333;
+}
+
+#alert-container {
+    margin-bottom: 20px;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#generate-report, #report-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-report:hover, #report-button:hover {
+    background-color: #218838;
+}
+
+#reservation-button {
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    padding: 5px 5px;
+    background-color: #e7bd00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+#reservation-button:hover {
+    background-color: #b99e00;;;
+
+}
+
+#back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #747474;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #5c5c5c;
+}
+
+#pdf-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pdf-button:hover {
+    background-color: #c82333;
+}
+
+#logout-button {
+    top: 5px;
+    right: 5px;
+    padding: 5px 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Estilo para o botão de Contato */
+#contact-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+#contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Garantir que o container tenha posição relativa para o botão se posicionar corretamente */
+.container {
+    position: relative;
+}
+
+
+.form-container input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% / 4 - 20px); /* Alterado para 4 inputs */
+}
+
+.form-container input[type="number"] {
+    appearance: none; /* Remove as setas de incremento/decremento */
+    -moz-appearance: textfield; /* Remove as setas no Firefox */
+}

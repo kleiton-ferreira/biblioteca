@@ -1,0 +1,79 @@
+<!--inventario.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Livros</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Inclua o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <span class="title"><b><h1>Net Livros - Inventário</h1></b></span>
+        <button id="logout-button">Logout</button> <!-- Botão de Logout -->
+        <button id="reservation-button" class="highlighted-button">Reservas</button> <!-- Botão de Reservas destacado -->
+        <br><br>
+        <div id="alert-container"></div> <!-- Container for alerts -->
+        <div class="form-container">
+            <input type="text" id="book-title" placeholder="Nome do Livro">
+            <input type="text" id="book-author" placeholder="Nome do Autor">
+            <input type="number" id="book-year" placeholder="Ano de Lançamento" min="0">
+            <input type="number" id="book-quantity" placeholder="Quantidade" min="0">
+            <button id="add-book">Adicionar Livro</button>
+        </div>
+        <input type="text" id="search-bar" placeholder="Buscar pelo nome"> <br><br>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Livro</th>
+                        <th>Nome do Autor</th>
+                        <th>Ano de Lançamento</th>
+                        <th>Disponível</th>
+                        <th>Quantidade</th>
+                        <th>Reservado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+                    <!-- Books will be added here -->
+                </tbody>
+            </table>
+        </div>
+        <button id="generate-report">Relatório</button> <!-- Button to generate report -->
+
+        <!-- Botão de Contato dentro do quadro branco com ícone de envelope -->
+        <a href="../paginas_principais/contato.html">
+        <button id="contact-button"><i class="fas fa-envelope"></i></button>
+    </div>
+    <script src="inventario.js"></script>
+    <script>
+        // Verificação de autenticação
+        const isAuthenticated = localStorage.getItem('email') !== null && localStorage.getItem('senha') !== null;
+        if (!isAuthenticated) {
+            window.location.href = '../registro_login/login.html';
+        }
+
+        // Logout
+        document.getElementById('logout-button').addEventListener('click', () => {
+            localStorage.removeItem('email');
+            localStorage.removeItem('senha');
+            window.location.href = '../registro_login/login.html';
+        });
+
+        // Navegação para a página de reservas
+        document.getElementById('reservation-button').addEventListener('click', () => {
+            window.location.href = 'reserva.html';
+        });
+
+        
+    </script>
+</body>
+</html>

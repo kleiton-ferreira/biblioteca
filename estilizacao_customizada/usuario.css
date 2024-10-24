@@ -1,0 +1,39 @@
+/*ESTILIZAÇÃO DO CABEÇALHO*/
+
+header {
+    background-color: gray;
+}
+
+/*ESTILIZAÇÃO DA COR DE FUNDO*/
+
+body {
+    background-color: lightgray;
+}
+
+/*ESTILIZAÇÃO DA IMAGEM DO USUÁRIO*/
+
+.imagemUsuario {
+    height: 250px;
+}
+
+/*ESTILIZAÇÃO DAS CORES DAS SEÇÕES*/
+
+.cor-secao {
+    background-color: gray;
+    color: white;
+}
+
+/*ESTILIZAÇÃO DAS IMAGENS DOS CARDS*/
+
+.imagem-card {
+    height: 300px;
+}
+
+/*ESTILIZAÇÃO DO FOOTER*/
+
+footer {
+    background-color: gray;
+    height: 100px;
+}
+
+

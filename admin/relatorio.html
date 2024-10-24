@@ -1,0 +1,53 @@
+<!--relatório.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Livros - Relatório</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Include jsPDF and html2pdf libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container" id="report-content">
+        <h1>Relatório de Livros</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Livro</th>
+                    <th>Nome do Autor</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Disponível</th>
+                </tr>
+            </thead>
+            <tbody id="report-list">
+                <!-- Report will be added here -->
+            </tbody>
+        </table>
+        <button id="back-button">Voltar ao Inventário</button> <!-- Button to go back -->
+        <button id="pdf-button">PDF</button> <!-- Button to generate PDF -->
+    </div>
+    <script src="relatorio.js"></script>
+
+    <script>
+        // Verificação de autenticação
+        const isAuthenticated = localStorage.getItem('email') !== null && localStorage.getItem('senha') !== null;
+        if (!isAuthenticated) {
+            window.location.href = '../registro_login/login.html';
+        }
+
+        // Logout
+        document.getElementById('logout-button').addEventListener('click', () => {
+            localStorage.removeItem('email');
+            localStorage.removeItem('senha');
+            window.location.href = '../registro_login/login.html';
+        });
+    </script>
+
+</body>
+</html>

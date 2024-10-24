@@ -1,0 +1,68 @@
+<!--reserva.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Livros - Reservas</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Inclua o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Reservar Livro</h1>
+        <div class="form-container">
+            <input type="text" id="reservation-book-id" placeholder="ID do Livro">
+            <input type="number" id="reservation-quantity" placeholder="Quantidade" min="1">
+            <button id="reserve-book">Reservar Livro</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Livro</th>
+                    <th>Nome do Autor</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Quantidade Disponível</th>
+                    <th>Reservado</th>
+                    <th>Ações</th> <!-- Nova coluna para ações -->
+                </tr>
+            </thead>
+            <tbody id="inventory-list">
+                <!-- Inventory will be loaded here -->
+            </tbody>
+        </table>
+        <button id="back-button">Voltar ao Inventário</button> <!-- Button to go back -->
+        <!-- <button id="report-button">Relatório</button> --> <!-- Botão removido -->
+
+        <!-- Botão de Contato dentro do quadro branco com ícone de envelope -->
+        <a href="../paginas_principais/contato.html">
+        <button id="contact-button"><i class="fas fa-envelope"></i></button>
+    </div>
+    <script src="reserva.js"></script>
+
+    <script>
+        // Verificação de autenticação
+        const isAuthenticated = localStorage.getItem('email') !== null && localStorage.getItem('senha') !== null;
+        if (!isAuthenticated) {
+            window.location.href = '../registro_login/login.html';
+        }
+
+        // Logout
+        document.getElementById('logout-button').addEventListener('click', () => {
+            localStorage.removeItem('email');
+            localStorage.removeItem('senha');
+            window.location.href = '../registro_login/login.html';
+        });
+
+        // Navegação para a página de contato
+        document.getElementById('contact-button').addEventListener('click', () => {
+            window.location.href = '../paginas_principais/contato.html';
+        });
+    </script>
+</body>
+</html>
